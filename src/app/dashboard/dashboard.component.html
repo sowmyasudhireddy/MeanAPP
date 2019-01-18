@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="card" style="width:400px" *ngFor="let product of products">
+  <img class="card-img-top" src="../../assets/product.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">Name : {{product.productName}}</h4>
+    <p class="card-text"> Price : {{product.price}}</p>
+    <p class="card-text"> Rating : {{product.rating}}</p>
+  </div>
+  <button class="btn btn-primary" (click)="addToCart(product)">Add To Cart</button>
+</div>
+
+<div *ngIf="cart.length>0">
+  <h1>Cart</h1>
+  <div class="card" style="width:400px" *ngFor="let product of cart">
+    <div class="card-body">
+      <h4 class="card-title">Name : {{product.productName}}</h4>
+      <p class="card-text"> Price : {{product.price}}</p>
+      <button class="btn btn-primary" (click)="removeItem(product)">Remove</button>
+    </div>
+  </div>
+</div>
