@@ -1,3 +1,4 @@
 <div class="form-group">
-  <input type="text" class="form-control" id="usr" placeholder="Search">
+  <input type="text" class="form-control" id="usr" placeholder="Search Products by name" [(ngModel)]="searchText">
+  <button class="btn btn-success" (click)="search()">Search</button>
 </div>

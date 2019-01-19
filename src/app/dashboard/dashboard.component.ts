@@ -37,4 +37,8 @@ export class DashboardComponent implements OnInit {
     }
     this.cart = updatedCart;
   }
+
+  filterProducts(products) {
+    this.products = products;
+  }
 }

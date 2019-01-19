@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class SharedDataService {
 
   cartItems = [];
+  searchResults = [];
 
   constructor() { }
 
@@ -18,4 +19,13 @@ export class SharedDataService {
   getCartItems() {
     return this.cartItems;
   }
+
+  setSearchResults(results) {
+    this.setSearchResults = results;
+  }
+
+  getSearchResults() {
+    return this.searchResults;
+  }
+
 }

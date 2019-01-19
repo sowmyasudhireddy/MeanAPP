@@ -6,11 +6,13 @@ import { DashboardComponent } from './dashboard.component';
 import { HeaderModule } from '../header/header.module';
 import { HeaderComponent } from '../header/header.component';
 import { SearchComponent } from '../search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     HeaderModule,
     CommonModule,
+    FormsModule,
     DashboardRoutingModule
   ],
   declarations: [DashboardComponent, HeaderComponent, SearchComponent]
