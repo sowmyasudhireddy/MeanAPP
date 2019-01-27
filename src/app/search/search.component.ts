@@ -19,6 +19,7 @@ export class SearchComponent implements OnInit {
     this.searchService.search(this.searchText).subscribe(res => {
       this.searchEmitter.emit(res);
     }, err => {
+      //console.log
       console.log(err);
     });
   }
